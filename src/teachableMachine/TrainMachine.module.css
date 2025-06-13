@@ -1,0 +1,311 @@
+.train_parent {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 75vh;
+}
+.train_left {
+    width: 60%;
+    /* height: calc(75vh - 10vh); */
+    height: 75vh;
+    overflow-y: auto;
+    /* border: 1px solid rgb(204, 204, 204); */
+    position: relative;
+}
+.train_left-small-div {
+    margin: 20px 10px;
+    padding: 10px;
+    background: rgb(245, 245, 245);
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.train_connection-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    /* height: 100%;  */ /*Match the parent container height */
+    height: 85vh;
+    overflow: hidden; /*Hide any overflow lines*/
+    pointer-events: none; /* Allow mouse events to pass through */
+    transform: translateY(-10vh); /*Adjust for header height if needed */
+}
+.train_right {
+    background: #ffffff;
+    width: 40%;
+    /* height: calc(75vh - 10vh); */
+    height: 75vh;
+    overflow: hidden; /* Prevent lines from extending beyond boundaries */
+    /* border: 1px solid #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.train_right-small-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 80px; */
+    background: #f3f3f3;
+    /* border: 1px solid #000; */
+    border-radius: 8px;
+    width: 215px;
+}
+.train_right_tranText {
+    width: 190px;
+    margin-top: 15px;
+}
+.train_right_tranTextz {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.train_right_tainButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 35px;
+    border-radius: 8px;
+    background: linear-gradient(
+        to right,
+        rgb(244, 167, 86),
+        rgb(242, 129, 104)
+    );
+    color: white;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.TrainingClassAddButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    position: absolute;
+    top: 80vh;
+    left: 23.8vw;
+    width: 154px;
+    color: white;
+    border-radius: 9px;
+    height: 40px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+        to right,
+        rgb(244, 167, 86),
+        rgb(242, 129, 104)
+    );
+}
+
+/* /////// Web Cam model Style ///////////////////////////////////////////////// */
+
+.webCamModel {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'Halcyon_SemiBold' !important; */
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 95000;
+    overflow: auto;
+}
+.webCamModelInner {
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* width: 400px; */
+    /* min-width: 400px; */
+    min-height: 150px;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #f0eded, white);
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0.5rem 0.5rem 2rem #d9d5d4;
+}
+.WebCamModelCloseBtn {
+    position: absolute;
+    width: 40px;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+}
+.webCamModelBtnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.capturePhotoBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    color: white;
+    border-radius: 9px;
+    padding: 10px;
+    /* height: 40px; */
+    cursor: pointer;
+    background: linear-gradient(
+        to right,
+        rgb(244, 167, 86),
+        rgb(242, 129, 104)
+    );
+}
+.captureImagesDiv {
+    margin-left: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.sampleImgDiv {
+    position: relative;
+}
+
+.imgDelete {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+.tooltipDiv {
+    position: absolute;
+    font-size: 15px;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0.5rem #e0ebf7;
+    border: 1px solid #b6b6db;
+    text-align: center;
+    padding: 5px;
+    font-weight: lighter;
+    border-radius: 7px;
+    visibility: hidden;
+    font-family: 'Halcyon_SemiBold';
+}
+.imgDeleteToolTip {
+    right: 15px;
+    top: 2px;
+    width: 55px;
+}
+
+#imgDelete:hover ~ .imgDeleteToolTip {
+    visibility: visible;
+}
+
+.webCamModelUploadDiv {
+    height: 300px;
+    width: 300px;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d7d7;
+    cursor: pointer;
+}
+.webCamModelUploadTextError {
+    color: red;
+    font-family: 'Halcyon_Regular';
+    font-size: 0.9rem;
+    /* font-family: ; */
+}
+.webCamModelUploadText {
+    text-align: center;
+    width: 70%;
+}
+.trainLodarStyle {
+    position: absolute;
+    z-index: 1;
+    top: -19px;
+    left: 21px;
+}
+
+.advanceBtnDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid black; */
+    border-top: 1px solid black;
+}
+.advanceBtnInrDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 40px;
+    cursor: pointer;
+}
+.advanceBtnInrDiv:hover {
+    color: rgb(244, 163, 87);
+}
+.advanceDiv {
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.epochsDiv,
+.batchDiv,
+.resetDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 40px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+}
+.epochsDivInr,
+.batchDivInr,
+.resetDivInr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+}
+.resetDivInr {
+    cursor: pointer;
+}
+.epochsDivInr input,
+.batchDivInr select {
+    border: 1px solid black;
+    width: 60px;
+    border-radius: 4px;
+    padding: 5px;
+    outline: none;
+}
+.epochsHelpDiv,
+.batchHelpDiv {
+    display: none;
+    color: white;
+    background-color: black;
+    position: absolute;
+    width: 300px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    opacity: 0.9;
+    left: -300px;
+    top: -46px;
+    z-index: 1;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.epochsHelpDivShow {
+    display: block;
+    text-align: justify;
+    /* flex-direction: column; */
+}
